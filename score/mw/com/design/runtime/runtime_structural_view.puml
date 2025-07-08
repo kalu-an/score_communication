@@ -1,5 +1,5 @@
 @startuml
-!include ../puml-theme-score.puml
+!include https://raw.githubusercontent.com/kalu-an/score_communication/refs/heads/puml_theme/score/mw/com/design/puml-theme-score.puml
 
 interface "mw::com::impl::IRuntime" as IRuntime {
     +{abstract} resolve(const InstanceSpecifier&) : std::vector<InstanceIdentifier>
