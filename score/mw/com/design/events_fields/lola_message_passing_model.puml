@@ -1,4 +1,4 @@
-@startuml "LoLa Message Passing Model"
+@startuml lola_message_passing_model
 title "Structural View_MessagePassing"
 
 class "mw::com::impl::IRuntimeBinding" {
@@ -201,8 +201,6 @@ class "UnregisterEventNotifierMsg" {
 class "DisconnectEventMessage" {
 }
 
-
-
 ' Relationships
 "mw::com::impl::lola::IRuntime" <|-- "<u>score::com::impl::lola::Runtime</u>"
 "mw::com::impl::IRuntimeBinding" <|-- "mw::com::impl::lola::IRuntime"
@@ -221,7 +219,6 @@ class "DisconnectEventMessage" {
 
 "lola::messaging::NotifyEventHandler" --|> "lola::messaging::HandlerBase"
 "lola::messaging::NotifyEventHandler" ..> "lola::messaging::IMessagePassingControl" : uses
-
 
 "lola::SubscribeEventMessage" .up.> "mw::com::message_passing::MediumMessage" : uses
 "lola::messaging::UnsubscribeEventMessage" .up.> "mw::com::message_passing::MediumMessage" : uses
